@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% from "_formhelpers.html" import delete_link %}
+
+{% set page_title = "Student Portal" %}
+{% block page_header %}
+    {{ super() }}
+    <a input type="button" onClick="parent.location='http://127.0.0.1:5001/signup/'" class="btn btn-primary pull-right">New Student Signup</a>
+    <a input type="button" onClick="parent.location='http://127.0.0.1:5001/login/'" class="btn btn-primary pull-right">Student Login</a>
+{% endblock %}
+
+{% block body %}
+{% endblock %}

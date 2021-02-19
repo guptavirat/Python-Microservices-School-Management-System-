@@ -1,0 +1,16 @@
+{% macro render_field(field) %}
+    <div class="form-group {% if field.errors %}has-error{% endif %}">
+        <label class="col-sm-2 col-lg-2 control-label">{{ field.label }}</label>
+        <div class="col-sm-8 col-lg-8">
+            {{ field(**kwargs) | safe }}
+            {% for error in field.errors %}
+                <p class="help-block">{{ error }}</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endmacro %}
+
+{% macro delete_link(url, id) %}
+    <form id="delete_form_{{ id }}" action="{{ url }}" method="POST" style="display: none;"></form>
+    <a href="#" class="submit-form" data-form-id="delete_form_{{ id }}">Delete</a>
+{% endmacro %}
