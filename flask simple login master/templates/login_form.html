@@ -1,0 +1,29 @@
+<!doctype html5>
+<html>
+<head>
+  <title>Login Here</title>
+</head>
+<body>
+  <h2>Login Here</h2>
+  <form id="login" action="{{ url_for('login')}}" method="post">
+    Username :  <input type="text" id="username" name="username" />
+    Password : <input type="password" id="password" name="password" />
+    <input type="submit" id="submit" text="Login" />
+    <a input type="button" onClick="parent.location='http://localhost:5000/'" class="btn btn-primary pull-right">
+    <br>
+    <br>
+    <br>
+    <br>Click to Navigate to Main Page
+    </a>
+  </form>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+</body>
+</html>

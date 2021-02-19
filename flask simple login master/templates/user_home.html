@@ -1,0 +1,14 @@
+<!doctype html5>
+<html>
+<head>
+  <title>{{ username.title() }} - Home</title>
+</head>
+<body>
+  <h2>Hello {{username.title()}}</h2>
+  <h2>Fetch your Data</h2>
+  <form id="Enter Student ID" method="Get">
+    Student ID :  <input type="text" id="username" name="username" />
+    <input type="submit" id="submit" text="Login" />
+  <p><a href="{{ url_for('logout', username=username) }}">Logout</a></p>
+</body>
+</html>
