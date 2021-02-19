@@ -1,7 +1,5 @@
 ## Flask Simple Login without Extensions
 
-### [https://techmonger.github.io/10/flask-simple-authentication/]("https://techmonger.github.io/10/flask-simple-authentication/")
-
 ## Getting Started
 
 - Install required packages `pip -r install requirements.txt`
@@ -14,5 +12,5 @@ python
 ```
 
 - Run application `python login_app.py`
-- Create new account  http://127.0.0.1:5000/signup
-- Login account  http://127.0.0.1:5000/login
+- Create new account  http://127.0.0.1:5001/signup
+- Login account  http://127.0.0.1:5001/login
